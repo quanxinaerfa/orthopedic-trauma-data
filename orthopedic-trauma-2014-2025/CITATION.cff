@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the article and the software."
+type: software
+title: "Orthopaedic Trauma Analysis Code 2014-2025"
+version: "1.0.0"
+date-released: "2026-XX-XX"
+authors:
+  - family-names: "Lu"
+    given-names: "Jianhua"
+    affiliation: "Haimen District People's Hospital, Nantong, Jiangsu, China"
+    email: "hmrysci@163.com"
+repository-code: "https://github.com/quanxinaerfa/orthopedic-trauma-industry-2014-2025"
+license: MIT
+keywords:
+  - orthopaedic admissions
+  - health equity
+  - migrant workers
+  - population ageing
+  - seasonal pattern
+  - hip fracture
+  - China
+  - public health
+  - DRG payment reform
+  - interrupted time series
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Lu"
+      given-names: "Jianhua"
+  title: "Health inequities and seasonal variation in orthopaedic admissions: a 12-year retrospective study of 55,787 admissions in a Chinese district hospital"
+  journal: "BMC Public Health"
+  year: 2026
+  doi: "TO_BE_ASSIGNED"

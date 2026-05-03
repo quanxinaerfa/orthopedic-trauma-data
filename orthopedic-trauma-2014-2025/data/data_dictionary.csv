@@ -1,0 +1,18 @@
+field_name,type,unit_or_values,description,source,used_in_module
+住院号,character,e.g. MR12345678,Medical record number (de-identified),HIS export,01
+身份证号,character,18-digit string (encrypted),National ID number (used to derive province and unique patient ID),HIS export,01;08
+患者姓名,character,Chinese characters,Patient name (removed in synthetic sample),HIS export,(not used in analysis)
+性别,factor,男性/女性,Sex (Male/Female),HIS export,01;03;04
+年龄,numeric,years (0-110),Age at admission,HIS export,01;03;04;05
+入院日期,date,YYYY-MM-DD,Admission date,HIS export,01;05;08
+出院日期,date,YYYY-MM-DD,Discharge date (used as inclusion criterion),HIS export,01;05;06;08
+出院年份,integer,2014-2025,Discharge year (derived from 出院日期),derived,01;03;06;07
+出院月份,integer,1-12,Discharge month (derived),derived,05
+住院天数,numeric,days,Length of stay,HIS export,07
+住院总费用RMB,numeric,RMB,Total hospitalisation cost,HIS export,06;07
+出院主诊断,character,Chinese text,Primary discharge diagnosis (free-text),HIS export,02
+是否手术,factor,是/否,Whether patient received surgery,derived from procedure codes,04
+是否骨折,factor,是/否,Whether primary diagnosis is a fracture,derived from keyword matching,02;04
+诊断大类,factor,上肢/下肢/脊柱-骨盆/内固定相关手术/退变性疾病/其他,Anatomical or procedural category,derived from keyword matching (see docs/keyword_dictionary.md),02;03;04;07
+患者来源分类,factor,江苏本地/外省流动人口/其他,Patient origin classification (Local Jiangsu / Inter-provincial migrant / Other),derived from ID first 6 digits,01;04
+费用异常标记,factor,正常/异常,Cost outlier flag (>3SD or <Q1-1.5IQR),derived,06;07
